@@ -1,0 +1,2 @@
+function isFunction(t){return"[object Function]"===Object.prototype.toString.call(t)&&!/^class\s/.test(Function.prototype.toString.call(t))}class UpsertMap extends Map{upsert(t,e,s){let n,o;n=arguments.length>2?s:void 0;const i=isFunction(e),r=isFunction(n);if(!i&&!r)throw TypeError("At least one callback required");return this.has(t)?(o=this.get(t),i&&(o=e(o),this.set(t,o))):r&&(o=n(),this.set(t,o)),o}}export{UpsertMap};
+//# sourceMappingURL=upsert-map.mjs.map

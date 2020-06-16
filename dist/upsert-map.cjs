@@ -1,0 +1,2 @@
+"use strict";function isFunction(t){return"[object Function]"===Object.prototype.toString.call(t)&&!/^class\s/.test(Function.prototype.toString.call(t))}Object.defineProperty(exports,"__esModule",{value:!0});class UpsertMap extends Map{upsert(t,e,s){let r,o;r=arguments.length>2?s:void 0;const n=isFunction(e),i=isFunction(r);if(!n&&!i)throw TypeError("At least one callback required");return this.has(t)?(o=this.get(t),n&&(o=e(o),this.set(t,o))):i&&(o=r(),this.set(t,o)),o}}exports.UpsertMap=UpsertMap;
+//# sourceMappingURL=upsert-map.cjs.map

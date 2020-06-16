@@ -1,0 +1,78 @@
+{
+  "author": "Anton Trofimenko",
+  "bugs": {
+    "url": "https://github.com/corefunc/upsert-map/issues"
+  },
+  "contributors": [
+    {
+      "email": "r37r0m0d3l@protonmail.com",
+      "name": "Anton Trofimenko"
+    }
+  ],
+  "dependencies": {},
+  "description": "JavaScript MergeMap",
+  "devDependencies": {
+    "@r37r0m0d3l/rollup-config-pkg": "git+https://github.com/r37r0m0d3l/rollup-config-pkg.git",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-jsdoc": "27.0.7",
+    "eslint-plugin-prettier": "3.1.4",
+    "jest": "26.0.1",
+    "npm-check": "5.9.2",
+    "prettier": "2.0.5"
+  },
+  "engines": {
+    "node": ">=12.9.0"
+  },
+  "engineStrict": true,
+  "exports": {
+    ".": {
+      "browser": {
+        "import": "./dist/upsert-map.mjs",
+        "require": "./dist/upsert-map.cjs"
+      },
+      "node": {
+        "import": "./dist/upsert-map.mjs",
+        "require": "./dist/upsert-map.cjs"
+      },
+      "import": "./dist/upsert-map.mjs",
+      "require": "./dist/upsert-map.cjs",
+      "default": "./dist/upsert-map.js"
+    }
+  },
+  "files": [
+    "dist/upsert-map.cjs",
+    "dist/upsert-map.cjs.map",
+    "dist/upsert-map.d.ts",
+    "dist/upsert-map.js",
+    "dist/upsert-map.js.map",
+    "dist/upsert-map.mjs",
+    "dist/upsert-map.mjs.map"
+  ],
+  "homepage": "https://github.com/corefunc/upsert-map",
+  "keywords": [
+    "map",
+    "upsert"
+  ],
+  "license": "MIT",
+  "main": "./dist/upsert-map.cjs",
+  "module": "./dist/upsert-map.mjs",
+  "name": "@corefunc/upsert-map",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corefunc/upsert-map.git"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.mjs",
+    "build:watch": "rollup --config rollup.config.mjs --watch",
+    "lint": "eslint ./src/**/*.mjs",
+    "lint:md": "remark .",
+    "package:upgrade": "npm-check --update",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage"
+  },
+  "type": "module",
+  "types": "./dist/upsert-map.d.ts",
+  "version": "1.0.0"
+}
